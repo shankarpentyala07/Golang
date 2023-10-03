@@ -16,3 +16,20 @@ A Go package is a directory made up of a collection of Go source files that are 
 
 For example, to import the fmt package which contains functions for formatting input and output strings, we type the keyword import followed by the package name.
 import "fmt"
+
+4.Import Multiple Packages
+To import multiple packages in a Go file, use the import keyword followed by the package name enclosed in double-quotes and repeat this statement for every imported package on its own line, or write a single import keyword to import multiple packages, one per line, in enclosed parentheses, (…).
+
+import "fmt"
+import "math"
+import "time"
+
+or
+
+import (
+  "fmt"
+  "math"
+  "time"
+)
+
+5.
