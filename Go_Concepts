@@ -195,3 +195,27 @@ fmt.Println(funFact)
 
 Constants have names without spaces: spaces aren’t allowed! This means that for us to have descriptive names (and it is important to have descriptive names so that we can read the code we’ve written) we need to use camelCase or PascalCase, capitalizing each subsequent word instead of adding spaces.
 
+
+11. Different verbs:
+a) The verb %T prints out the type of the second argument
+specialNum := 42
+fmt.Printf("This value's type is %T.", specialNum)
+// Prints: This value's type is int.
+
+b) Using %d we can interpolate a number into a string
+votingAge := 18
+fmt.Printf("You must be %d years old to vote.", votingAge)
+
+c) With %f, we can limit how precise we are by including a value between the % and f like: %.2f. If we include this in our code:
+gpa := 3.8
+fmt.Printf("You're averaging: %.2f.", gpa)
+
+d)The %v portion is our placeholder and is known as a verb in Go. Verbs are identified by the combination of a % character followed by a letter. The specific letter informs what fills in the placeholder, in this case, %v gets the value of "C" from our second argument, guess.
+
+guess := "C"
+fmt.Printf("Is %v your final answer?", guess)
+// Prints: Is C your final answer?
+
+
+
+
