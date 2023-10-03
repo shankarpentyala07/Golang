@@ -1,0 +1,7 @@
+1.Compile Go
+The Go compiler takes a Go source file with a .go extension, processes it and produces an executable file without any extension. To compile a Go source file, test.go, type at the command line:
+
+$ go build test.go
+This will produce an executable file, test. To run test, type in the command line:
+
+$ ./test
