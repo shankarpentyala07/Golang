@@ -5,3 +5,8 @@ $ go build test.go
 This will produce an executable file, test. To run test, type in the command line:
 
 $ ./test
+
+2. Running Files in Go
+The Go compiler can execute Go code from the source file without producing an executable file. Instead of build, use run. To do this, type the following in the command line:
+$ go run exampleFile.go
+The go run command compiles the code (like go build) and executes it. Unlike go build, go run will NOT create an executable file in our current folder.
