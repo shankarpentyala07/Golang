@@ -185,3 +185,13 @@ someInteger := 42
 // Create pointer from variable using "&"
 p = &someInteger
 
+
+10. constants:
+We use the const keyword to create a constant. We immediately assign a value to the constant using a literal.
+
+const funFact = "Hummingbirds' wings can beat up to 200 times a second."
+fmt.Println("Did you know?")
+fmt.Println(funFact)
+
+Constants have names without spaces: spaces aren’t allowed! This means that for us to have descriptive names (and it is important to have descriptive names so that we can read the code we’ve written) we need to use camelCase or PascalCase, capitalizing each subsequent word instead of adding spaces.
+
