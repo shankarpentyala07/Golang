@@ -71,4 +71,16 @@ func main() {
 }
 Note: the time printed will be UTC time zone.
 
-7.
+7. Go Comments
+Comments are useful for documentation in a Go file and are ignored by the compiler. There are two types of comments:
+
+-> a single-lined comment is preceded by a double forward slash, //, and ends at the end of the line.
+-> a multi-lined comment begins with /* followed by one or more lines of comments and ends with */
+
+// one line comment
+/*
+  this comment
+  is on multiple lines
+  and ends here
+*/
+
