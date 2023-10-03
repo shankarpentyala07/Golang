@@ -66,8 +66,9 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World")
+  fmt.Println("Hello World")
   fmt.Println(t.Now())
 }
+Note: the time printed will be UTC time zone.
 
 7.
