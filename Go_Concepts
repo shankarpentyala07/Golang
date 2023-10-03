@@ -44,4 +44,30 @@ func main(){
   fmt.Println("Hello World")
 }
 
-6.
+6. Package Aliases
+We can also provide an alias to a package by specifying an alias name before the package name.
+
+import (
+  p1 "package1"
+  "package2"
+)
+
+In the example above we’ve aliased package1 as p1 and now we can call functions from package1 by using p1 like:
+p1.SampleFunc()
+
+Instead of:
+package1.SampleFunc() 
+
+package main
+
+import (
+  "fmt"
+  t "time"
+)
+
+func main() {
+	fmt.Println("Hello World")
+  fmt.Println(t.Now())
+}
+
+7.
