@@ -10,3 +10,9 @@ $ ./test
 The Go compiler can execute Go code from the source file without producing an executable file. Instead of build, use run. To do this, type the following in the command line:
 $ go run exampleFile.go
 The go run command compiles the code (like go build) and executes it. Unlike go build, go run will NOT create an executable file in our current folder.
+
+3. Packages in Go
+A Go package is a directory made up of a collection of Go source files that are compiled together. This collection of reusable code typically contains functions related to a specific topic or concept. To use code from a particular package, we simply import it into our Go source file.
+
+For example, to import the fmt package which contains functions for formatting input and output strings, we type the keyword import followed by the package name.
+import "fmt"
