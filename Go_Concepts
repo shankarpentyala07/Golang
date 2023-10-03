@@ -32,4 +32,16 @@ import (
   "time"
 )
 
-5.
+5. main package , main function
+
+Normally when we write functions, you need to write code to invoke them, otherwise they are unused. However, the main function is different if it resides in the main package.When we have a main function in the main package, this is special to Go. When compiled, an executable is produced, and when run, the executable uses the main function as the starting point.
+
+package main
+
+import "fmt"
+
+func main(){
+  fmt.Println("Hello World")
+}
+
+6.
