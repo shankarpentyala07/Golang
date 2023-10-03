@@ -84,3 +84,11 @@ Comments are useful for documentation in a Go file and are ignored by the compil
   and ends here
 */
 
+8. Go Doc
+Go includes a program go doc for extracting and viewing documentation from .go files. For information about a package, use the command go doc followed by the package name.
+
+go doc fmt 
+
+For information about a package function, use the command go doc followed by the package name, a period then the function name.
+
+go doc fmt.Println
