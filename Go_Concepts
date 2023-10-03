@@ -230,4 +230,28 @@ fmt.Scan() expects addresses for arguments, hence the &
 
 
 
+13. Scoped Short Declaration Statement:
+We can also include a short variable declaration before we provide a condition in either if or switch statements. Here’s the syntax:
+1.
+x := 8
+y := 9
+if product := x * y; product > 60 {
+  fmt.Println(product, "  is greater than 60")
+}
 
+In our if statement, we first declare product. Notice that product is separated from the condition using a semi-colon ;. We can also have a short variable declaration inside a switch statement:
+
+2.
+switch season := "summer" ; season {
+case "summer":
+  fmt.Println("Go out and enjoy the sun!")
+}
+
+3. 
+switch hour := time.Now().Hour() ; hour {
+case 5:
+    fmt.Println("It's go time.")
+default:
+    fmt.Println("It's 5 o'clock somewhere.")
+}
+One thing to keep in mind when using the short variable declaration in if or switch statements is that the declared variable is scoped to the statement blocks.
