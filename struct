@@ -1,0 +1,18 @@
+Syntax:
+
+// Struct names begin with a capital letter in Go
+type NameOfStruct struct {
+  // Struct fields go here
+}
+
+
+Let’s say we want to define a 2D point with an x and y coordinate. We could define two variables x and y and use them throughout our program. However, using multiple related variables in this way is error-prone. We might use x when we mean y, and dealing with many points could cause confusion.
+
+A better way to represent a 2D point is to create a struct called Point which contains both coordinates. Defining Point in this way logically groups together the relevant data types. We would define the struct for Point like so:
+
+type Point struct {
+  x int
+  y int
+}
+
+Using this new type, we would be able to pass Point information around our program as a single variable!
