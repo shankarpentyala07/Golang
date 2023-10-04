@@ -317,5 +317,39 @@ func main() {
   }
 }
 
+15. defer
+
+We can delay a function call to the end of the current scope by using the defer keyword. defer tells Go to run a function, but at the end of the current function. This is useful for logging, file writing, and other utilities.
+
+Example: We need to be disconnecting from the database that we’re connecting to to get our cool information! Use defer to call disconnectDatabase() every time queryDatabase() finishes running.
+
+package main
+import "fmt"
+
+func queryDatabase(query string) string {
+  var result string
+  connectDatabase()
+  // Add deferred call to disconnectDatabase() here
+  defer disconnectDatabase()
+  
+  if query == "SELECT * FROM coolTable;" {
+    result = "NAME|DOB\nVincent Van Gogh|March 30, 1853"
+  }  
+  fmt.Println(result)
+  return result
+}
+
+func connectDatabase() {
+  fmt.Println("Connecting to the database.")
+}
+
+func disconnectDatabase() {
+  fmt.Println("Disconnecting from the database.")
+}
+
+func main() {
+  queryDatabase("SELECT * FROM coolTable;")
+}
+
 
 
