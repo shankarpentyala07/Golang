@@ -1,0 +1,91 @@
+package main
+import "fmt"
+
+func printFirstLastArray(array [4]int) {
+    fmt.Println("First", array[0])
+    fmt.Println("Last", array[3])
+}
+
+
+func changeFirst(slice []int, value int) {
+    if (len(slice) > 0) {
+        slice[0] = value
+    }
+}
+
+func main() {
+    myTutors := []string{"Kirsty", "Mishell", "Jose", "Neil"}
+    fmt.Println(myTutors)
+    theirHours := [4]int{20,10,30,15}
+    theirHoursSlice := theirHours[:]
+    changeFirst(theirHoursSlice, 25)
+    fmt.Println(theirHoursSlice)
+    printFirstLastArray(theirHours)
+}
+
+
+Concept:
+An array is a fixed size ordered list of elements with the same data type. Arrays are useful for collecting and accessing multiple related values. Example use cases include:
+
+- Storing sensor values
+- Computing averages
+- Holding lists of information
+
+Both arrays and slices are collections of multiple elements of the same data type. However, a slice can be resized to hold additional elements, whereas an array cannot.
+
+An array’s capacity is its length, and this cannot change. A slice has both a length and a capacity, where:
+
+The slice’s length is the current number of elements it holds
+The slice’s capacity is the number of elements it can hold before needing to resize itself.
+Array Creation
+There are a variety of ways to create arrays:
+
+An empty array can be created by specifying its number of intended elements and its type.
+
+var myArray [3]int
+
+An array can be created with elements in two ways:
+
+Specifying:
+
+The number of elements
+The type
+A list of values
+animals := [4]string{"Dog", "Hippo", "Cat", "Hamster"}
+
+Or using the ... syntax to automatically determine the number of elements:
+
+animals := [...]string{"Dog", "Hippo", "Cat", "Hamster"}
+
+Slice Creation
+A slice can be created with or without elements.
+
+Without elements, an empty set of square brackets [] and the data type is provided:
+
+var numberSlice []int
+
+With elements, a list of items enclosed in curly braces {} is also provided:
+
+names := []string{"Kathryn", "Martin", "Sasha", "Steven"}
+
+Array and Slice Access and Modification
+Values within an array or slice can be accessed using a square bracket [] syntax:
+
+value := array[index]
+
+Values can be modified using square brackets [], an index, and the assignment operator =:
+
+array[index] = value
+
+Array and Slice Functions
+The length of an array or slice can be accessed using the len function.
+
+length := len(sliceOrArray)
+
+The capacity of a slice can be accessed using the cap function.
+
+capacity := cap(slice)
+
+An element can be added to the end of a slice using the append function:
+
+slice := append(slice, newElement)
