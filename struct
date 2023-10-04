@@ -16,3 +16,30 @@ type Point struct {
 }
 
 Using this new type, we would be able to pass Point information around our program as a single variable!
+
+To use a struct we just defined, we have to create an instance of it. Assume we defined Point from the last exercise. We could create an instance of it like so:
+
+p1 := Point{x: 10, y: 12}
+
+or
+
+var p1 = Point{x: 10, y: 12}
+
+Using this syntax, we can define values for each of the struct’s fields. However, Go allows us to rely on default values as well. We can omit fields:
+
+p1 := Point{x: 10}
+// y will be set to 0
+
+In fact, we can omit all fields to rely only on default values:
+
+p1 := Point{}
+// x and y will be set to 0
+
+The order of our struct definition allows us to avoid labeling our fields. The values are assigned from left to right according to how the fields are defined in the struct from top to bottom.
+
+p1 := Point{10, 12}
+// Same as var p1 = Point{10, 12}
+
+When not using labels, we must provide values for every field; otherwise, our code will not compile.
+
+
