@@ -1,0 +1,84 @@
+package main
+import "fmt"
+
+type DonutShop struct {
+  donuts    map[string]int
+  customers map[string]float32
+}
+
+func (s* DonutShop) init() {
+  s.donuts = map[string]int {
+    "frosted":   10,
+    "chocolate": 15,
+    "jelly":     8,
+  }
+  s.customers = make(map[string]float32)
+}
+
+func (s DonutShop) calculatePrice(count int) float32 {
+  return float32(count) * 1.50
+}
+
+func (s DonutShop) placeOrder(name string, kind string, count int) {
+  s.customers[name] = s.calculatePrice(count)
+  s.donuts[kind] = s.donuts[kind] - count
+}
+
+func (s DonutShop) checkout(name string) {
+  fmt.Printf("%s please pay %f\n", name, s.customers[name])
+}
+
+func main() {  
+  var name = "daryl"
+  var kind = "jelly"
+  var count = 5
+  var donutShop = new(DonutShop)
+
+  donutShop.init()
+  donutShop.placeOrder(name, kind, count)
+  donutShop.checkout(name)
+  fmt.Println(donutShop.customers)
+  fmt.Println(donutShop.donuts)
+}
+
+
+Concept:
+
+Map Creation
+Maps can be initialized with or without data.
+
+customers := map[string]int
+
+employees := map[string]int{
+  "John":  1001,
+  "Ezira": 1002,
+  "Emily": 1003,
+}
+
+Accessing
+We can look up values with a key. We can also get a status value to determine if the key was set in the map.
+
+count,status := inventory["sporks"]
+
+if status {
+  fmt.Println("we have %d sporks!", count)
+} else {
+  fmt.Println("what is a spork?")
+}
+
+Adding and Updating
+Adding and updating key-values in our map follows the same format:
+
+customers["George"] = 10.50
+
+Deleting
+We use the delete function to remove key-value pairs from our map:
+
+delete(inventory, "sporks")
+
+Conclusion
+We can use maps for all sorts of things! Examples include:
+
+Organizing collections such as types of coins, kinds of donuts, etc.
+Mapping different data such as people names to balance due.
+Storing frequently used content for a user.
