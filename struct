@@ -1,3 +1,68 @@
+
+Overview:
+
+A group of related variables can be defined as a struct. Each variable within a struct is known as a field.
+
+A struct must be defined before it can be used in a program. The definition of a struct includes its name and its fields.
+
+
+type Point struct{
+  x int
+  y int
+}
+
+An instance of a defined struct can be created by providing its name followed by a set of curly braces with optional values.
+
+p1 := Point{x: 10, y: 12}
+
+Fields within a struct can be accessed or modified using the . operator.
+
+p1 := Point{x:10, y:12}
+fmt.Println(p1.x)
+
+Methods can be associated with a struct by naming a struct parameter in parentheses before the function name.
+
+func (rectangle Rectangle) area()  float32{
+  return rectangle.length * rectangle.height
+}
+
+func main() {
+  rect.area()
+}
+
+The values of a struct can only be modified in a function if the struct is passed as a pointer.
+
+func (rectangle *Rectangle) modify(newLength float32){
+  rectangle.length = newLength
+}
+
+Accessing the fields of a pointer to a struct does not require dereferencing. The fields of the struct pointer can be accessed using the normal . syntax.
+
+steve := Employee{“Steve”, “Stevens”, 34, “Junior Manager”}
+pointerToSteve := &steve
+fmt.Println(pointerToSteve.firstName)
+
+Arrays can be used to store many of the same struct’s instances.
+
+points := []Point{{1, 1}, {7, 27}, {12, 7}, {9, 25}}
+
+A struct can contain fields that are themselves other structs.
+
+type Name struct{
+  firstName string
+  lastName string
+}
+
+type Employee struct{
+  name Name
+  age int
+  title string
+}
+
+Congratulations on finishing the lesson. Now that you understand structs, you can use them to define custom collections of variables in your programs!
+
+
+
 Syntax:
 
 // Struct names begin with a capital letter in Go
