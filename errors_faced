@@ -1,0 +1,20 @@
+1.
+mkdir hello
+cd hello
+go mod init example/hello
+
+create hello.go file:
+package main
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}
+
+ go run .
+hello.go:2:8: package fmt is not in GOROOT (/Users/shankarpentyala/go/src/fmt)
+package example/hello: cannot find package
+
+Solution:
+Unset GOROOT - the go tools know where they are supposed to be and you rarely need to set it.
+https://stackoverflow.com/questions/21510714/go-cannot-find-package-fmt-error
