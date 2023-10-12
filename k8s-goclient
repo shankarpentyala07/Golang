@@ -1,1 +1,12 @@
-client-go
+
+3 Important Libraries to talk to k8s cluster:
+1. client-go
+2. api
+3. apimachinery
+
+
+To import:
+k8s.io/client-go
+
+
+
