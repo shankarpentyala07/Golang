@@ -1,3 +1,5 @@
 1. go tool dist list -json
 
 This lists all possible GOOS and GOARCH combinations
+
+2. go env -w GO111MODULE=auto configures the Go environment to automatically enable or disable the use of Go modules based on the presence of a go.mod file. This is particularly useful when working with projects that may or may not use modules, as it allows Go to adapt its behavior accordingly
