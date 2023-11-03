@@ -1,0 +1,6 @@
+1. K8s client-go examples:
+https://pkg.go.dev/k8s.io/client-go/examples
+
+2. Building Operators using Golang:
+https://sdk.operatorframework.io/docs/building-operators/golang/
+
