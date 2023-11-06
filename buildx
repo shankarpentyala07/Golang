@@ -1,0 +1,9 @@
+GITHUB_TOKEN=REDACTED \
+ARTIFACTORY_USER=REDACTED \
+ARTIFACTORY_TOKEN=REDACTED \
+docker buildx build \
+  --secret id=GITHUB_TOKEN \
+  --secret id=ARTIFACTORY_USER \
+  --secret id=ARTIFACTORY_TOKEN \
+  --load \
+  -t icr.io/my-namespace/secrets-training:latest .
