@@ -17,6 +17,18 @@ type Rectangle struct{
 	length,width float64
 }
 
+type Square struct{
+	length float64
+}
+
+func(s Square) Area() float64{
+	return s.length * s.length
+}
+
+func (s Square) Perimeter() float64{
+	return 4*s.length
+}
+
 func (r Rectangle) Area() float64{
 	return r.length * r.width
 }
@@ -32,4 +44,12 @@ func main(){
 
 	fmt.Println("Area:",area)
 	fmt.Println("permieter:",perimeter)
+	var s Geometry = Square{4}
+	area = s.Area()
+	perimeter = s.Perimeter()
+
+	fmt.Println("Area:",area)
+	fmt.Println("permieter:",perimeter)
+
+
 }
