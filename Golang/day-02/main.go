@@ -3,6 +3,7 @@ package main
 import (
 	"day2/shapes"
 	"fmt"
+	"github.com/google/uuid"
 )
 
 func main() {
@@ -11,4 +12,10 @@ func main() {
 
 	s := shapes.Square{5}
 	fmt.Println("Area of Square:", s.AreaOfSquare())
+
+	fmt.Println(uuid.NewUUID())
+
+
+
+
 }
