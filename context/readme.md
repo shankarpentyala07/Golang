@@ -1,0 +1,1 @@
+The context allows the server to know when a request has been cancelled by the client so that it can terminate its resources and move on
